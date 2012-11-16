@@ -36,6 +36,8 @@ define(['require', 'dojo', 'orion/globalCommands'], function(require, dojo, mGlo
 		_init: function() {
 			// this is a cheat, all dom ids should be passed in
 			var closeButton = dojo.byId("closeNotifications"); //$NON-NLS-0$
+			var fileButton = dojo.byId("buttoneclipse.newFile3"); //$NON-NLS-0$
+			var folderButton = dojo.byId("buttoneclipse.newFolder4"); //$NON-NLS-0$
 			if (closeButton && !this._hookedClose) {
 				dojo.connect(closeButton, "onclick", this, function() { //$NON-NLS-0$
 					this.setProgressMessage("");
@@ -47,11 +49,11 @@ define(['require', 'dojo', 'orion/globalCommands'], function(require, dojo, mGlo
 					}				
 				});
 				//Setting add file button to close error message onclick
-				dojo.connect(dojo.byId("buttoneclipse.newFile3"), "onclick", this, function() { //$NON-NLS-0$
+				dojo.connect(fileButton, "onclick", this, function() { //$NON-NLS-0$
 					this.setProgressMessage("");
 				}); 
 				//Setting new folder button to close error message onclick
-				dojo.connect(dojo.byId("buttoneclipse.newFolder4"), "onclick", this, function() { //$NON-NLS-0$
+				dojo.connect(folderButton, "onclick", this, function() { //$NON-NLS-0$
 					this.setProgressMessage("");
 				}); 
 			}
