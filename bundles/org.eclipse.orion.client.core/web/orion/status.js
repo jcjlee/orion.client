@@ -46,6 +46,14 @@ define(['require', 'dojo', 'orion/globalCommands'], function(require, dojo, mGlo
 						this.setProgressMessage("");
 					}				
 				});
+				//Setting add file button to close error message onclick
+				dojo.connect(dojo.byId("buttoneclipse.newFile3"), "onclick", this, function() { //$NON-NLS-0$
+					this.setProgressMessage("");
+				}); 
+				//Setting new folder button to close error message onclick
+				dojo.connect(dojo.byId("buttoneclipse.newFolder4"), "onclick", this, function() { //$NON-NLS-0$
+					this.setProgressMessage("");
+				}); 
 			}
 		},
 		
