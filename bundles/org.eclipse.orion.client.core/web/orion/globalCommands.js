@@ -581,14 +581,12 @@ define(['i18n!orion/nls/messages', 'require', 'dojo', 'dijit', 'orion/commonHTML
 			var pos;
 			if (elements.notifications && dojo.hasClass(elements.notifications, "slideContainerActive")) { //$NON-NLS-0$
 				pos = dojo.position(elements.notifications);
-				heightExtras += pos.h;
+				heightExtras += pos.h + dojo.style(elements.notifications, "marginTop");
 			}
 			if (elements.slideContainer && dojo.hasClass(elements.slideContainer, "slideContainerActive")) { //$NON-NLS-0$
 				pos = dojo.position(elements.slideContainer);
-				heightExtras += pos.h;
-			}
-			if (heightExtras > 0) {
-				heightExtras += 8;  // padding
+				heightExtras += pos.h + dojo.style(elements.slideContainer, "marginTop");
+			
 			}
 			dojo.style(elements.toolbarTarget, {"top": elements.toolbarTargetY + heightExtras + "px", "bottom": 0}); //$NON-NLS-0$ //$NON-NLS-1$ //$NON-NLS-2$
 		}

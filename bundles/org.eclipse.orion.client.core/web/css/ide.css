@@ -397,7 +397,9 @@ h2 {
 	font-size:11px;
 	z-index: 50;
 }
-
+#pageToolbar .slideContainer{
+	margin-bottom:0;
+}
 .slideParameters {
 	border: 1px solid #808080;
 	background-color: #d7d7d7;
